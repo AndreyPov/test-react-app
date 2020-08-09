@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ToDoList from './components/to-do-list'
+import SearchPanel from './components/search-panel'
+import AppHeader from './components/app-header'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  return (
+    <div>
+      <AppHeader/>
+      <SearchPanel/>
+      <ToDoList/>
+    </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+console.log(App)
+// const hello = React.createElement('h1',null, 'Hello World!')
+console.log('hi there, developer')
+
+ReactDOM.render(App(), document.getElementById('root'))
+
+export {}
